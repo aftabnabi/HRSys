@@ -1,0 +1,64 @@
+#main-container {
+	width: 998px;
+	padding: 10px;
+	margin: 0 auto;
+}
+#login-form-container {
+	width: 300px;
+	margin: 100px auto;
+}
+#login-form label {
+	float: left;
+	padding-right: 5px;
+	text-align: right;
+	width: 150px;
+}
+#login-form div {
+	padding-top: 10px;
+}
+#login-form div.ui-form-button {
+	text-align: right;
+}
+#login-form div.ui-form-button input{
+	margin: 5px;
+}
+
+
+.progressbar {
+	height: 10px !important;
+}
+.top { 
+	width: 100%; 
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+.top .userinfo {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.top .userinfo p {
+	margin: 5px 0;
+	padding: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.top .logout {
+	float: right;
+}
+
+/*LM*/
+#top-buttons {
+	padding: 10px 0 10px 0;
+}
+#create_request {
+	float: right;
+}
+
+.footer {
+	font-size: 9px;
+	font-family:Arial, Helvetica, sans-serif;
+	width: 150px;
+	margin: 0 auto;
+}

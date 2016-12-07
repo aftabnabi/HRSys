@@ -1,0 +1,1 @@
+<div class="footer">Sourcing Module - Version 0.0.1</div>
