@@ -1,6 +1,6 @@
 <?php
-	$dbhost = "localhost";
-	// $dbuser = "formitis_cpm";
+	$dbhost = "127.0.0.1";
+	//$dbuser = "formitis_cpm";
 	// $dbpassword = "formitis@cpm!";
 	// $database = "formitis_cpm";
 	 $dbuser = "root";
@@ -9,6 +9,6 @@
 	
 	$table_prefix = "";
 	
-	$db = mysql_connect($dbhost, $dbuser, $dbpassword) or die("Connection Error: " . mysql_error()); 
-	mysql_select_db($database) or die("Error conecting to db.");
+	$db = mysqli_connect($dbhost, $dbuser, $dbpassword, $database) or die("Connection Error: " . mysql_error()); 
+	//mysqli_select_db($database) or die("Error conecting to db.");
 ?>

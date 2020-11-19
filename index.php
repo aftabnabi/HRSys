@@ -7,10 +7,11 @@
 	
 		if ($_GET['resp'] == "success") {
 			echo "SUCCESS:Login Successful, redirecting to '".$_GET['target']."'.";
-			exit;
+			
 		}
+
 		else {
-			echo "ERROR:Login Failed, Invalid Username/Password.";
+			echo "ERROR:Login Failed, Invalid Username/Password. <a href='/hrsys'>click</a>";
 			exit;
 		}
 	}
