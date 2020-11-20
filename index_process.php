@@ -4,6 +4,7 @@
 	
 	if(($_POST['username'])&&($_POST['password']) )
 	{
+		
 		$user=$_POST['username'];
 
 		$sql = 'SELECT users_id, first_name, last_name, user_name, password, user_roles_id, users.department_id,' 				   
@@ -13,9 +14,10 @@
 			  .' INNER JOIN divisions on departments.division_id=divisions.division_id  '
 			  .' WHERE user_name = "'.$user.'" and password ="'.md5($_POST["password"]).'"';
 
-		$res = mysqli_query($db,$sql) or die("error: ".mysqli_error());
-		$row = mysqli_fetch_array($res);
-		if (mysqli_num_rows($res)) 
+		$res = mysql_query($sql) or die("error: ".mysql_error());
+		$row = mysql_fetch_array($res);
+	
+		if (mysql_num_rows($res)) 
 		{
 		    $_SESSION['authorized']		= true;
 		    $_SESSION['userid'] 		= $row['users_id'];
@@ -41,13 +43,13 @@
 		} 
 		else 
 		{
-			header("location: index.php?act=login&resp=fail&inner");
-			exit;
+			header("location: index.php?act=login&resp=fail");
+  			exit;
 		}
 	}
 	else
 	{
-		header("location: index.php?act=login&resp=fail&outer");
+		header("location: index.php?act=login&resp=fail");
 		exit;
 	}
 ?>

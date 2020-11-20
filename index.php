@@ -2,16 +2,14 @@
 	session_start();
 	
 	//ajax response handling from index_process to 
-	
-	if (isset($_GET['act']) == "login") {
+	if ($_GET['act'] == "login") {
 	
 		if ($_GET['resp'] == "success") {
 			echo "SUCCESS:Login Successful, redirecting to '".$_GET['target']."'.";
-			
+			exit;
 		}
-
 		else {
-			echo "ERROR:Login Failed, Invalid Username/Password. <a href='/hrsys'>click</a>";
+			echo "ERROR:Login Failed, Invalid Username/Password.";
 			exit;
 		}
 	}
@@ -57,7 +55,7 @@ $(function(){
 </head>
 <body>
 <div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="login-form-container">
-	<div class="message"><?php isset($_SESSION['message'])== true? $_SESSION['message'] : ""; ?></div>
+	<div class="message"><?php echo $_SESSION['message']; ?></div>
 	<form action="index_process.php" method="post" id="login-form">
 		<div><label for="username">UserName:</label><input name="username" type="text" id="username"/></div>
 		<div><label for="password">Password:</label><input name="password" type="password" /></div>

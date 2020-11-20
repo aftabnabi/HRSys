@@ -2,7 +2,7 @@
 include_once("config.php");
 
 	$fid = '';
-	if ( isset($_GET['fid']) != '' )
+	if ( $_GET['fid'] != '' )
 	{
 		$fid     = $_GET['fid'];
 		$sql_s_f = 'SELECT sourcing_form_id, sourcing_request_id, requestby , requestby_id,'
