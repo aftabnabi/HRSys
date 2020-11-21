@@ -2,7 +2,7 @@
 	session_start();
 	
 	//ajax response handling from index_process to 
-	if ($_GET['act'] == "login") {
+	if (isset($_GET['act']) && $_GET['act'] == "login") {
 	
 		if ($_GET['resp'] == "success") {
 			echo "SUCCESS:Login Successful, redirecting to '".$_GET['target']."'.";
